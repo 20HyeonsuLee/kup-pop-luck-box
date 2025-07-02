@@ -1,3 +1,5 @@
+url: https://kup-pop-luck-box.lovable.app/
+
 # 🎁 쿠뽑 (KupPop)  
 **기프티콘 즉시 판매 + 랜덤박스 구매를 결합한 확률형 거래 플랫폼**  
 
