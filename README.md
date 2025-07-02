@@ -1,73 +1,149 @@
-# Welcome to your Lovable project
+# 🎁 쿠뽑 (KupPop)  
+**기프티콘 즉시 판매 + 랜덤박스 구매를 결합한 확률형 거래 플랫폼**  
 
-## Project info
+> 💸 “안 쓰는 기프티콘, 지금 팔고”  
+> 🎲 “조금 저렴하게 사고, 운 좋으면 더 이득”  
+> 소비자 간 수요를 연결한 **순환형 확률 쿠폰 마켓**
 
-**URL**: https://lovable.dev/projects/8c044e35-f30f-401a-a047-0abf266adc91
+---
 
-## How can I edit this code?
+## ✅ 서비스 개요
 
-There are several ways of editing your application.
+**KupPop**은  
+사용자가 사용하지 않을 기프티콘을 **즉시 시세의 약 90% 가격에 판매**하고,  
+다른 사용자는 이를 **확률형 랜덤박스로 구매**하는 플랫폼입니다.
 
-**Use Lovable**
+- 판매자는 유효기간이 애매하거나 사용처가 제한된 기프티콘을 간편하게 판매
+- 구매자는 정가보다 약간 저렴하게 구매 + 운 좋으면 더 높은 금액 획득
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8c044e35-f30f-401a-a047-0abf266adc91) and start prompting.
+| 상품명 | 구매가 | 구성 |
+|--------|--------|------------|
+| 10,000원 랜덤박스 | 9,700원 | 90% 확률: 10,000원 쿠폰<br>10% 확률: 12,000원 쿠폰 |
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 👤 사용자 정의
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **판매자**: “안 쓸 쿠폰 묵혀두느니 지금 파는 게 낫지”
+- **구매자**: “어차피 쓸 거, 조금이라도 싸게 사면 기분 좋잖아”
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🧍‍♀️ 페르소나
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🙋 이지혜 (26세, 직장인, 구매자)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- 평소 배달앱, 카페 쿠폰을 자주 구매
+- “3%만 싸도 아낀 느낌. 가끔은 득템도 하고!”
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 🙋‍♂️ 박준호 (23세, 대학생, 판매자)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- 생일선물로 스타벅스/GS 기프티콘 여러 개 받음
+- "커피는 잘 안 마시고, 편의점은 자주 안 가니까…"  
+- 유효기간 넉넉하지만 잘 안 쓸 것 같아  
+- **“9,000원이라도 받아서 치킨이나 사 먹는 게 낫지”**
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🎯 사용자 목표
 
-**Use GitHub Codespaces**
+- 판매자는 기프티콘을 간편하게 현금화하고 싶다
+- 구매자는 쿠폰을 약간 싸게 사고 운 좋게 더 높은 금액 얻고 싶다
+- 누구도 손해 보지 않으면서 거래가 이루어지는 구조
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📘 사용자 시나리오
 
-This project is built with:
+### 판매자 흐름
+1. 앱 접속 → “쿠폰 판매하기” 클릭
+2. 보유 기프티콘 코드 입력 → 유효성 자동 검증
+3. 현재 시세의 90% 금액 안내 → 동의 후 판매 확정
+4. 정산 방식 선택 (포인트 or 계좌 이체)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 구매자 흐름
+1. 랜덤박스 상품 페이지 접속
+2. 원하는 구성(가격, 확률 등) 선택 후 구매
+3. 박스 오픈 → 즉시 결과 확인
+4. 당첨된 쿠폰은 내 쿠폰함에서 복사/사용 가능
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/8c044e35-f30f-401a-a047-0abf266adc91) and click on Share -> Publish.
+## ✅ 인수 조건
 
-## Can I connect a custom domain to my Lovable project?
+| Given | When | Then |
+|-------|------|------|
+| 판매자가 기프티콘을 등록했을 때 | 유효성 검증 통과 시 | 즉시 90% 가격으로 판매 확정 |
+| 구매자가 랜덤박스를 결제했을 때 | 박스를 열면 | **2초 이내에** 당첨된 쿠폰이 표시됨 |
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🔧 기능 요구사항
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### 판매자 기능
+- 쿠폰 코드 등록 및 중복/유효성 검증
+- 실시간 시세 기반 자동 가격 제안
+- 판매 내역 및 정산 내역 확인
+- 정산 방식 선택: 계좌이체 / 플랫폼 포인트
+
+### 구매자 기능
+- 랜덤박스 리스트 보기 (확률, 기대값 안내 포함)
+- 랜덤박스 결제 및 박스 오픈 UI
+- 내 쿠폰함: 보관, 복사, 사용 안내
+- 구매 이력 및 통계 확인
+
+---
+
+## 🔍 기존 서비스와 차별점
+
+| 항목 | 중고마켓/기프티콘몰 | KupPop |
+|------|----------------------|--------|
+| 쿠폰 판매 | 직접 거래, 번거로움 | ✅ 즉시 90% 가격에 판매 |
+| 구매 방식 | 고정 할인/정가 판매 | ✅ 랜덤박스 → 기대값 기반 구매 |
+| 사용자 경험 | 수작업 인증, 대기 | ✅ 원클릭 등록/검증/구매 |
+| 수익 구조 | 수수료 불명확 | ✅ 구매-판매 간 차액 수익 모델 |
+
+---
+
+## 📌 핵심 가치 제안
+
+| 가치 | 설명 |
+|------|------|
+| **재고 유동화** | 사용 계획 없는 쿠폰을 간편하게 현금화 |
+| **소비자 기대심리 자극** | 운 좋게 높은 금액 당첨되는 즐거움 |
+| **투명한 기대값 공개** | 구성 확률 및 평균 당첨가 공개 |
+| **심리적 만족 + 실질적 절약** | 본전 이상은 보장되는 구조
+
+---
+
+## 🌐 프로토타입 (예정)
+
+- URL: `https://kup-pop.lovable.app`
+- 주요 화면 구성:
+  - 판매 등록 화면
+  - 랜덤박스 리스트 및 구매 화면
+  - 박스 오픈 애니메이션
+  - 내 쿠폰함 / 정산 내역
+
+---
+
+## 🛣 확장 방향
+
+- 쿠폰 재판매 허용 (2차 유통 구조)
+- 특정 브랜드 테마 박스 (스타벅스 박스, 배민 박스 등)
+- 누적 거래 리워드, 포인트 적립
+- 타임박스 이벤트 (한정 구성, 한정 확률)
+
+---
+
+## 📎 요약
+
+- **서비스명**: **KupPop (쿠뽑)**
+- **핵심 기능**:
+  - ✅ 사용하지 않는 쿠폰을 즉시 90%에 판매
+  - ✅ 9,700원에 확률형 랜덤박스 구매
+- **핵심 타깃**: 소소한 이득을 원하는 현실 소비자
+- **차별화 포인트**:
+  - 손해 없는 확률형 구매
+  - 복잡함 없는 간편 판매
+  - 거래 구조의 순환성 확보
